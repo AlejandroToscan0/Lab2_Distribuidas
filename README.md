@@ -161,6 +161,3 @@ rm -f "./Lab2_Distribuidas/calificaciones.csv" "./Lab2_Distribuidas/estudiantes.
 ```
 Luego se vuelve a ejecutar `nrcs_server.py` y los servidores según el modo elegido.
 
-## Licencia
-
-Uso académico.
