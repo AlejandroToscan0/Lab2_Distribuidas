@@ -85,10 +85,10 @@ def menu() -> None:
     """Muestra el menú interactivo del cliente y procesa entradas del usuario."""
     while True:
         print("\n=== Menú Calificaciones (concurrente) ===")
-        print("1) AGREGAR (elige ID → autodetecta nombre → pide NRC y nota)")
-        print("2) BUSCAR (todas las notas del estudiante)")
+        print("1) AGREGAR")
+        print("2) BUSCAR")
         print("3) ACTUALIZAR")
-        print("4) LISTAR (todas las notas de todos)")
+        print("4) LISTAR")
         print("5) ELIMINAR")
         print("0) SALIR")
 
@@ -110,7 +110,7 @@ def menu() -> None:
             cmd = f"BUSCAR|{student_id}"
         elif opcion == "3":
             student_id = input("ID estudiante a actualizar: ").strip()
-            materia = input("Materia (NRC) a actualizar (deja vacío si solo tiene una): ").strip()
+            materia = input("Materia (NRC) a actualizar: ").strip()
             nueva_cal = input("Nueva calificación: ").strip()
             if materia:
                 cmd = f"ACTUALIZAR|{student_id}|{materia}|{nueva_cal}"
@@ -120,7 +120,7 @@ def menu() -> None:
             cmd = "LISTAR"
         elif opcion == "5":
             student_id = input("ID estudiante a eliminar: ").strip()
-            materia = input("Materia (NRC) de la nota a eliminar (deja vacío si solo tiene una): ").strip()
+            materia = input("Materia (NRC) de la nota a eliminar: ").strip()
             if materia:
                 cmd = f"ELIMINAR|{student_id}|{materia}"
             else:
